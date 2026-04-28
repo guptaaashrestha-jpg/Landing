@@ -1,0 +1,14 @@
+# Environments
+urban-venv/
+.env
+.venv
+env/
+venv/
+
+# Databases
+data/*.db
+data/*.sqlite
+
+# OS files
+.DS_Store
+Thumbs.db
