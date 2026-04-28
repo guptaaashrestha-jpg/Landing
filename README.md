@@ -22,5 +22,8 @@ A premium, high-fidelity landing page for the **Urban Traffic Digital Twin** pro
 - `main.js`: Interactivity and scroll animations.
 - `assets/`: Optimized images and visual assets.
 
+## 🔗 Related Repositories
+- **[Urban Digital Twin Core](https://github.com/guptaaashrestha-jpg/urban-digital-twin)**: The Python-based simulation engine, vehicle physics, and pedestrian dynamics.
+
 ---
 *Built as part of the Urban Traffic Digital Twin ecosystem.*
