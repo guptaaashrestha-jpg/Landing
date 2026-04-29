@@ -1,29 +1,35 @@
-# 🏙️ UrbanFlow | Digital Twin Landing Page
+# ◆ UrbanFlow — Digital Twin Landing Page
 
-A premium, high-fidelity landing page for the **Urban Traffic Digital Twin** project. This site showcases the advanced simulation capabilities, including agent-based pedestrian dynamics and real-time telemetry analysis.
+A handcrafted, editorial-grade landing page for the **Urban Traffic Digital Twin** simulation engine. No templates, no frameworks, no generic AI — just intentional design.
 
-## 🚀 Live Demo
-**[View the Live Site here!](https://guptaaashrestha-jpg.github.io/Landing/)**
+## 🔗 Live Demo
+**[guptaaashrestha-jpg.github.io/Landing](https://guptaaashrestha-jpg.github.io/Landing/)**
 
-## ✨ Key Features
-- **Modern Cyber-Urban Design**: Sleek dark mode with glassmorphism and neon accents.
-- **Interactive Experience**: Smooth scroll-triggered animations and parallax effects.
-- **Project Highlights**: Showcases pedestrian modeling, collision avoidance, and high-frequency telemetry.
-- **Responsive Layout**: Optimized for both desktop and mobile viewing.
+## ✦ Design Philosophy
 
-## 🛠️ Tech Stack
-- **HTML5** & **CSS3** (Custom Design System)
-- **Vanilla JavaScript** (Intersection Observer API)
-- **GitHub Pages** (Hosting)
+This isn't a typical project page. It's a storytelling experience — cinematic hero imagery, narrative-driven scroll flow, and a design language inspired by premium agency work.
 
-## 📁 Project Structure
-- `index.html`: Main structure and content.
-- `style.css`: Custom design tokens and responsive styles.
-- `main.js`: Interactivity and scroll animations.
-- `assets/`: Optimized images and visual assets.
+**Key design decisions:**
+- **Editorial typography** — Playfair Display serif for emotional emphasis, Inter sans-serif for readability
+- **Chartreuse accent system** — `#c8ff00` as primary accent, breaking away from generic teal/purple gradients
+- **Film grain overlay** — Subtle animated noise texture for analog warmth
+- **Custom cursor** — Dot + ring cursor with magnetic button interactions
+- **Cinematic hero** — Full-bleed imagery with parallax + gradient veil
+- **Scroll-triggered reveals** — Elements animate into view as you scroll, never replay
+- **Animated counters** — Metric values count up with eased interpolation
+- **Split-panel capabilities** — Alternating image/text layout for visual rhythm
+- **Zero dependencies** — Everything is vanilla HTML, CSS, JS. No libraries.
 
-## 🔗 Related Repositories
-- **[Urban Digital Twin Core](https://github.com/guptaaashrestha-jpg/urban-digital-twin)**: The Python-based simulation engine, vehicle physics, and pedestrian dynamics.
+## 📁 Structure
+```
+index.html    → Semantic HTML5 structure
+style.css     → Custom design system with CSS variables
+main.js       → Interactions (cursor, counters, parallax, reveals)
+assets/       → Generated imagery (hero, flow art, pedestrian scene)
+```
+
+## 🔗 Related
+- **[Urban Digital Twin Core](https://github.com/guptaaashrestha-jpg/urban-digital-twin-rl)** — The Python simulation engine
 
 ---
-*Built as part of the Urban Traffic Digital Twin ecosystem.*
+*Designed and built by Shrestha S Gupta as part of the Urban Traffic Digital Twin ecosystem.*

@@ -3,65 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UrbanFlow | Digital Twin Simulation</title>
-    <meta name="description" content="Next-generation urban traffic digital twin simulation with pedestrian dynamics and real-time telemetry.">
+    <title>UrbanFlow — Digital Twin Simulation Engine</title>
+    <meta name="description" content="UrbanFlow is a next-generation urban traffic digital twin that simulates pedestrian dynamics, collision avoidance, and real-time telemetry at millisecond precision.">
+    <meta name="keywords" content="digital twin, urban simulation, traffic, pedestrian dynamics, real-time telemetry">
+    <meta name="author" content="Shrestha S Gupta">
+    <meta property="og:title" content="UrbanFlow — Digital Twin Simulation Engine">
+    <meta property="og:description" content="Simulate, analyze, and optimize city dynamics with millisecond precision.">
+    <meta property="og:type" content="website">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <!-- Grain overlay -->
+    <div class="grain" aria-hidden="true"></div>
+
+    <!-- Custom cursor -->
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+
+    <!-- Navigation -->
+    <nav id="main-nav">
+        <a href="#" class="nav-logo">
+            <span class="logo-mark">◆</span>
+            <span class="logo-text">UrbanFlow</span>
+        </a>
+        <div class="nav-links">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#capabilities" class="nav-link">Capabilities</a>
+            <a href="#metrics" class="nav-link">Metrics</a>
+            <a href="https://github.com/guptaaashrestha-jpg/urban-digital-twin-rl" class="nav-link nav-link--cta" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+        <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#capabilities" class="mobile-link">Capabilities</a>
+        <a href="#metrics" class="mobile-link">Metrics</a>
+        <a href="https://github.com/guptaaashrestha-jpg/urban-digital-twin-rl" class="mobile-link" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+
+    <!-- Hero -->
+    <header id="hero">
+        <div class="hero-bg">
+            <img src="assets/hero-city.png" alt="" class="hero-img" loading="eager">
+            <div class="hero-gradient"></div>
+        </div>
         <div class="hero-content">
-            <h1>UrbanFlow</h1>
-            <p class="hero-subtitle">The next generation of urban traffic digital twins. Simulate, analyze, and optimize city dynamics with millisecond precision.</p>
-            <div class="cta-group">
-                <a href="#features" class="btn btn-primary">Explore Features</a>
+            <div class="hero-eyebrow reveal-up">Digital Twin Simulation Engine</div>
+            <h1 class="reveal-up delay-1">
+                <span class="hero-line">Cities are</span>
+                <span class="hero-line"><em>living</em> systems.</span>
+                <span class="hero-line">We simulate them.</span>
+            </h1>
+            <p class="hero-body reveal-up delay-2">UrbanFlow models the chaos of real-world traffic — every pedestrian decision, every near-miss, every millisecond — so you don't have to guess.</p>
+            <div class="hero-actions reveal-up delay-3">
+                <a href="#about" id="hero-explore-btn" class="btn-outline">See how it works</a>
+                <a href="https://github.com/guptaaashrestha-jpg/urban-digital-twin-rl" id="hero-github-btn" class="btn-ghost" target="_blank" rel="noopener">View source →</a>
             </div>
+        </div>
+        <div class="scroll-indicator reveal-up delay-4" aria-hidden="true">
+            <div class="scroll-line"></div>
         </div>
     </header>
 
-    <section id="features">
-        <h2 class="reveal">Engineered for Complexity</h2>
-        <div class="features-grid">
-            <div class="card reveal">
-                <h3>Pedestrian Dynamics</h3>
-                <p>Advanced agent-based modeling for realistic pedestrian behavior, jaywalking simulations, and crowd flow analysis.</p>
-            </div>
-            <div class="card reveal">
-                <h3>Collision Avoidance</h3>
-                <p>Sophisticated emergency braking and obstacle detection logic integrated directly into the vehicle physics engine.</p>
-            </div>
-            <div class="card reveal">
-                <h3>Real-time Telemetry</h3>
-                <p>Stream high-fidelity data from every agent in the simulation to an integrated SQLite database for deep analytics.</p>
+    <!-- About / Manifesto -->
+    <section id="about" class="section-about">
+        <div class="about-container">
+            <div class="about-label reveal-up">What is UrbanFlow</div>
+            <h2 class="about-heading reveal-up delay-1">
+                Not another dashboard.<br>
+                A <em>digital nervous system</em><br>
+                for your city.
+            </h2>
+            <div class="about-body reveal-up delay-2">
+                <p>Traditional traffic models are static. They assume perfect conditions and rational actors. But real cities are messy — jaywalkers dart across six lanes, delivery trucks double-park, a single distracted driver cascades into thirty minutes of gridlock.</p>
+                <p>UrbanFlow is an agent-based simulation engine built in Python that models every individual — vehicle, pedestrian, cyclist — as an autonomous agent with its own decision-making logic. The result? A digital twin that breathes like a real city.</p>
             </div>
         </div>
     </section>
 
-    <section id="simulation">
-        <h2 class="reveal">Visual Intelligence</h2>
-        <div class="dashboard-preview reveal">
-            <img src="assets/hero.png" alt="Urban Digital Twin Simulation Preview">
-            <div class="stats-bar">
-                <div class="stat-item">
-                    <div class="stat-value">10k+</div>
-                    <div class="stat-label">Active Agents</div>
+    <!-- Capabilities -->
+    <section id="capabilities" class="section-caps">
+        <div class="cap-header">
+            <div class="cap-label reveal-up">Core Capabilities</div>
+        </div>
+
+        <!-- Capability 1: Pedestrian Dynamics -->
+        <div class="cap-block">
+            <div class="cap-visual reveal-scale">
+                <img src="assets/pedestrian.png" alt="Pedestrian crossing simulation" loading="lazy">
+            </div>
+            <div class="cap-text">
+                <span class="cap-number reveal-up">01</span>
+                <h3 class="cap-title reveal-up delay-1">Pedestrian Dynamics</h3>
+                <p class="cap-desc reveal-up delay-2">Every pedestrian is an autonomous agent with behavioral states — waiting, crossing, jaywalking, panicking. They react to traffic signals, nearby vehicles, and other pedestrians in real-time. No scripted paths. Pure emergent behavior.</p>
+                <ul class="cap-details reveal-up delay-3">
+                    <li>Agent-based behavioral state machines</li>
+                    <li>Jaywalking probability modeling</li>
+                    <li>Crowd density-aware pathfinding</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Capability 2: Collision Avoidance -->
+        <div class="cap-block cap-block--reverse">
+            <div class="cap-visual reveal-scale">
+                <img src="assets/flow-art.png" alt="Traffic flow visualization" loading="lazy">
+            </div>
+            <div class="cap-text">
+                <span class="cap-number reveal-up">02</span>
+                <h3 class="cap-title reveal-up delay-1">Collision Avoidance</h3>
+                <p class="cap-desc reveal-up delay-2">The physics engine doesn't just detect obstacles — it models emergency braking dynamics, tire friction coefficients, and reaction time distributions. Skid marks render dynamically based on actual deceleration forces.</p>
+                <ul class="cap-details reveal-up delay-3">
+                    <li>Multi-body physics simulation</li>
+                    <li>Emergency braking with reaction delay</li>
+                    <li>Procedural skid mark generation</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Capability 3: Telemetry -->
+        <div class="cap-block">
+            <div class="cap-visual reveal-scale">
+                <img src="assets/hero-city.png" alt="City-scale telemetry overview" loading="lazy">
+            </div>
+            <div class="cap-text">
+                <span class="cap-number reveal-up">03</span>
+                <h3 class="cap-title reveal-up delay-1">Real-time Telemetry</h3>
+                <p class="cap-desc reveal-up delay-2">Every agent continuously streams position, velocity, acceleration, and interaction events to an integrated SQLite database. Analyze traffic patterns, near-miss events, and congestion bottlenecks with millisecond granularity.</p>
+                <ul class="cap-details reveal-up delay-3">
+                    <li>High-frequency data streaming per agent</li>
+                    <li>SQLite integration for deep analytics</li>
+                    <li>Exportable telemetry snapshots</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metrics -->
+    <section id="metrics" class="section-metrics">
+        <div class="metrics-inner">
+            <div class="metrics-label reveal-up">By the Numbers</div>
+            <div class="metrics-grid">
+                <div class="metric reveal-up delay-1">
+                    <div class="metric-value" data-target="10000" data-suffix="+">0</div>
+                    <div class="metric-label">Concurrent Agents</div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-value">60 FPS</div>
-                    <div class="stat-label">Real-time Render</div>
+                <div class="metric reveal-up delay-2">
+                    <div class="metric-value" data-target="60" data-suffix=" FPS">0</div>
+                    <div class="metric-label">Render Performance</div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-value">0.2ms</div>
-                    <div class="stat-label">Physics Latency</div>
+                <div class="metric reveal-up delay-3">
+                    <div class="metric-value" data-target="0.2" data-suffix="ms" data-decimal="true">0</div>
+                    <div class="metric-label">Physics Latency</div>
+                </div>
+                <div class="metric reveal-up delay-4">
+                    <div class="metric-value" data-target="100" data-suffix="%">0</div>
+                    <div class="metric-label">Open Source</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 UrbanFlow Project. Built with high-fidelity digital twin technology.</p>
+    <!-- Tech Stack -->
+    <section class="section-stack">
+        <div class="stack-container">
+            <div class="stack-text reveal-up">
+                <div class="stack-label">Built With</div>
+                <h2 class="stack-heading">Clean architecture.<br>Zero bloat.</h2>
+                <p class="stack-desc">UrbanFlow is built on Python with Pygame for rendering, SQLite for telemetry storage, and pure math for physics. No heavyweight frameworks. No cloud dependencies. Just code that runs.</p>
+            </div>
+            <div class="stack-items reveal-up delay-1">
+                <div class="stack-item">
+                    <div class="stack-icon">🐍</div>
+                    <div class="stack-name">Python</div>
+                    <div class="stack-role">Core Engine</div>
+                </div>
+                <div class="stack-item">
+                    <div class="stack-icon">🎮</div>
+                    <div class="stack-name">Pygame</div>
+                    <div class="stack-role">Rendering</div>
+                </div>
+                <div class="stack-item">
+                    <div class="stack-icon">🗄️</div>
+                    <div class="stack-name">SQLite</div>
+                    <div class="stack-role">Telemetry</div>
+                </div>
+                <div class="stack-item">
+                    <div class="stack-icon">∑</div>
+                    <div class="stack-name">Pure Math</div>
+                    <div class="stack-role">Physics</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Footer -->
+    <footer id="footer" class="section-footer">
+        <div class="footer-content">
+            <h2 class="footer-heading reveal-up">Ready to dive in?</h2>
+            <p class="footer-body reveal-up delay-1">UrbanFlow is open source. Clone it, run it, break it, improve it.</p>
+            <a href="https://github.com/guptaaashrestha-jpg/urban-digital-twin-rl" id="footer-github-btn" class="btn-primary reveal-up delay-2" target="_blank" rel="noopener">
+                View on GitHub
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 UrbanFlow</span>
+            <span class="footer-dot">·</span>
+            <span>Built by <a href="https://github.com/guptaaashrestha-jpg" target="_blank" rel="noopener">Shrestha S Gupta</a></span>
+        </div>
     </footer>
 
     <script src="main.js"></script>
